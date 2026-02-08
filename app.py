@@ -58,13 +58,13 @@ df = None
 raw_path = None
 
 if option == "Download Dataset":
-    if st.button("Download Iris Dataset"):
-        log("Downloading Iris dataset")
-        url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+    if st.button("Download Penguins Dataset"):
+        log("Downloading Penguins dataset")
+        url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv"
         response = requests.get(url)
          
         
-        raw_path = os.path.join(RAW_DIR, "iris.csv")
+        raw_path = os.path.join(RAW_DIR, "penguins.csv")
         with open(raw_path, 'wb') as f:
             f.write(response.content)
          
